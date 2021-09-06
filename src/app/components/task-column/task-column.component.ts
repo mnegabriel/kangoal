@@ -13,6 +13,8 @@ export class TaskColumnComponent implements OnInit {
   @Input() column!: IBoardColumn;
   @Input() allColumnsIds!: string[]
 
+  hovering: boolean = false
+
   otherColumnsIds: string[] = []
 
   constructor(

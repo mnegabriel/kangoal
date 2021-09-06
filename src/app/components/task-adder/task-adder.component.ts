@@ -15,7 +15,8 @@ export class TaskAdderComponent implements OnInit {
   }
 
   onSubmit() {
-    this.addTask.emit(this.newTask)
+    this.newTask = this.newTask.trim()
+    if (this.newTask) this.addTask.emit(this.newTask)
     this.newTask = ''
   }
 

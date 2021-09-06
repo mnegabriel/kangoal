@@ -1,2 +1,4 @@
-<input type="text" [(ngModel)]="newTask" (keydown)="onKeyDown($event)">
-<button (click)="onSubmit()">+</button>
+<article class="task-adder">
+  <input type="text" [(ngModel)]="newTask" (keydown)="onKeyDown($event)" placeholder="add task">
+  <button (click)="onSubmit()"><i class="far fa-plus-square"></i></button>
+</article>

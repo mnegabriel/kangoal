@@ -1,0 +1,47 @@
+:host(.show) {
+  .task-adder {
+    // outline: 3px solid red;
+    opacity: 0.6;
+  }
+}
+
+
+:host(.force-show) {
+
+  .task-adder {
+    opacity: 1 !important;
+  }
+}
+.task-adder:focus-within {
+  opacity: 1 !important;
+}
+
+.task-adder {
+  opacity: 0;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  background-color: var(--color-white, white);
+  padding: 18px;
+
+  display: flex;
+  gap: 10px;
+
+  input {
+    flex: 1;
+    border: none;
+    border-radius: 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+}
