@@ -5,11 +5,17 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TaskComponent } from './components/task/task.component';
+import { TaskColumnComponent } from './components/task-column/task-column.component';
+import { BoardComponent } from './components/board/board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaskComponent,
+    TaskColumnComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,

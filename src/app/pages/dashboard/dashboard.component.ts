@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop'
+import { IBoard } from 'src/app/interfaces/IBoard';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,28 +8,35 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  lists = [
-    {
-      title: "Backlog",
-      tasks: [
-        'lavar banheiro',
-        'dormir de novo',
-        'comer um brigadeiro',
-      ]
-    },
-    {
-      title: "To-do",
-      tasks: []
-    },
-    {
-      title: "Doing",
-      tasks: []
-    },
-    {
-      title: "Done",
-      tasks: []
-    },
-  ]
+  board: IBoard = {
+    name: 'Primeiro Board',
+    columns: [
+      {
+        id: "backlog",
+        title: "Backlog",
+        tasks: [
+          'lavar banheiro',
+          'dormir de novo',
+          'comer um brigadeiro',
+        ]
+      },
+      {
+        id: "to-do",
+        title: "To-do",
+        tasks: []
+      },
+      {
+        id: "doing",
+        title: "Doing",
+        tasks: []
+      },
+      {
+        id: "done",
+        title: "Done",
+        tasks: []
+      },
+    ]
+  }
 
   constructor() { }
 

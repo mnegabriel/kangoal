@@ -1,0 +1,30 @@
+:host {
+  flex: 1;
+  display: flex;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  &__wrapper {
+    display: flex;
+    flex: 1;
+
+    overflow-x: auto;
+  }
+
+  &__columns {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+
+}

@@ -1,0 +1,14 @@
+<article class="board">
+  <header class="board__header">
+    <h2 class="board__name">{{board.name}}</h2>
+  </header>
+
+  <div class="board__wrapper">
+    <div class="board__columns">
+
+      <app-task-column *ngFor="let column of board.columns" [column]="column" [allColumnsIds]="columnIds">
+      </app-task-column>
+
+    </div>
+  </div>
+</article>
