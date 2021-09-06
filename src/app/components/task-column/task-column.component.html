@@ -4,5 +4,6 @@
     [cdkDropListConnectedTo]="otherColumnsIds" (cdkDropListDropped)="drop($event)">
     <app-task *ngFor="let task of column.tasks" [task]="task" cdkDrag>
     </app-task>
+    <app-task-adder *ngIf="column.title === 'Backlog'" (addTask)="addTaskToColumn(column.title, $event)"></app-task-adder>
   </div>
 </div>
