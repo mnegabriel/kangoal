@@ -5,6 +5,6 @@
     <app-task *ngFor="let task of column.tasks" [task]="task" cdkDrag>
     </app-task>
     <app-task-adder *ngIf="column.title === 'Backlog'" (addTask)="addTaskToColumn(column.title, $event)"
-      [ngClass]="{show: hovering, 'force-show': !column.tasks.length}"></app-task-adder>
+      [class]="{show: hovering, 'force-show': !column.tasks.length}"></app-task-adder>
   </div>
 </div>

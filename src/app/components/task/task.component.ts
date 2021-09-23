@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ITask } from 'src/app/interfaces/ITask';
 
 @Component({
   selector: 'app-task',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  @Input() task: string = ''
+  @Input() task!: ITask
 
   constructor() { }
 

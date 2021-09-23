@@ -3,6 +3,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 
 import { IBoardColumn } from 'src/app/interfaces/IBoardColumn';
 import { BoardService } from 'src/app/services/board.service';
+import { ITask } from 'src/app/interfaces/ITask';
 
 @Component({
   selector: 'app-task-column',
@@ -13,9 +14,9 @@ export class TaskColumnComponent implements OnInit {
   @Input() column!: IBoardColumn;
   @Input() allColumnsIds!: string[]
 
+  otherColumnsIds: string[] = []
   hovering: boolean = false
 
-  otherColumnsIds: string[] = []
 
   constructor(
     private boardService: BoardService
@@ -29,7 +30,7 @@ export class TaskColumnComponent implements OnInit {
     this.boardService.addTaskToBoard(columnName, task)
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<ITask[]>) {
     console.log(event)
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
